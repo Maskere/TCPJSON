@@ -1,0 +1,14 @@
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\bin\Debug\net9.0\JSON.exe
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\bin\Debug\net9.0\JSON.deps.json
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\bin\Debug\net9.0\JSON.runtimeconfig.json
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\bin\Debug\net9.0\JSON.dll
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\bin\Debug\net9.0\JSON.pdb
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.AssemblyInfoInputs.cache
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.AssemblyInfo.cs
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.csproj.CoreCompileInputs.cache
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.dll
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\refint\JSON.dll
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.pdb
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\JSON.genruntimeconfig.cache
+C:\Users\Mus\Programmering\ObligatoriskOpgave3\JSON\obj\Debug\net9.0\ref\JSON.dll
