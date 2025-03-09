@@ -5,5 +5,9 @@ namespace JSONTCP{
         public static Request? Deserialize(string jsonString){
             return JsonSerializer.Deserialize<Request>(jsonString);
         }
+
+        public static string? Serialize(Response? response){
+            return JsonSerializer.Serialize(response);
+        }
     }
 }

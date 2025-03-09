@@ -18,41 +18,51 @@ namespace JSONTCP{
 
                     if(incomingRequest != null){
                         Request? request = JSONUtil.Deserialize(incomingRequest);
+                        string? responseMessage = null;
 
                         if(request != null){
-                            if(int.TryParse(request.FirstNumber,out int first)){
-                                if(int.TryParse(request.SecondNumber,out int second)){
-                                    if(request.RequestType == "Random"){
-                                        if(first < second){
-                                            writer.Write(random.Next(first, second + 1));
-                                        }
-                                        else{
-                                            writer.Write("First number must be lower than second");
-                                        }
-                                    }
-                                    else if(request.RequestType == "Add"){
-                                        writer.Write(first + second);
-                                    }
-                                    else if(request.RequestType == "Subtract"){
-                                        writer.Write(first - second);
-                                    }
-                                    else{
-                                        writer.Write(request.RequestType);
+                            bool isFirstNumberValid = int.TryParse(request.FirstNumber,out int first);
+                            bool isSecondNumberValid = int.TryParse(request.SecondNumber,out int second);
+
+                            if(isFirstNumberValid){
+                                if(isSecondNumberValid){
+                                    switch(request.RequestType){
+                                        default:
+                                            responseMessage = request.RequestType;
+                                            break;
+                                        case "Random":
+                                            if(first < second){
+                                                responseMessage = random.Next(first,second +1).ToString();
+                                            }
+                                            else{
+                                                responseMessage = "First number must be lower than the second number";
+                                            }
+                                            break;
+                                        case "Add":
+                                            responseMessage = $"{first + second}";
+                                            break;
+                                        case "Subtract":
+                                            responseMessage = $"{first - second}";
+                                            break;
                                     }
                                 }
                                 else{
-                                    writer.Write("Invalid input: Second number must be a number");
+                                    responseMessage = "Second number must be a number";
                                 }
                             }
                             else{
-                                writer.Write("Invalid input: First number must be a number");
+                                responseMessage = "First number must be a number";
                             }
                         }
                         else{
-                            writer.Write("Bad request");
+                            responseMessage = "Bad request";
                         }
-                    }
-                    else{
+                        if(responseMessage == null){
+                            throw new ArgumentNullException("Response is null");
+                        }
+                        Response response = new(responseMessage);
+
+                        writer.Write(JSONUtil.Serialize(response));
                     }
                 }
             }
