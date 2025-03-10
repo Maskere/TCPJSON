@@ -61,7 +61,6 @@ namespace JSONTCP{
                             throw new ArgumentNullException("Response is null");
                         }
                         Response response = new(responseMessage);
-
                         writer.Write(JSONUtil.Serialize(response));
                     }
                 }
